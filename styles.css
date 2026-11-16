@@ -1,0 +1,37 @@
+/* Keep the demo readable on narrow screens without adding a CSS framework. */
+body {
+  max-width: 38rem;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font: 1rem/1.5 system-ui, sans-serif;
+}
+
+section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+}
+
+input,
+textarea,
+button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.65rem;
+  font: inherit;
+}
+
+button {
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+
+#status {
+  min-height: 1.5em;
+}

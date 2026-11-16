@@ -1,0 +1,14 @@
+{
+  "name": "web-push-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small browser push notification demo",
+  "scripts": {
+    "start": "node server.js",
+    "generate-vapid": "web-push generate-vapid-keys"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "web-push": "^3.6.7"
+  }
+}

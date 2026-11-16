@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Push Demo</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/client.js" defer></script>
+
+    <!-- Link the Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+  </head>
+  <body>
+    <h1>Web Push Demo</h1>
+    <p>Subscribe this browser, then send a message to all subscribed browsers.</p>
+
+    <!-- Each browser must subscribe before the server can send it notifications. -->
+    <section>
+      <h2>Subscribe</h2>
+      <button id="subscribe" type="button">Subscribe to notifications</button>
+    </section>
+
+    <!-- Messages are sent to every stored subscription by the server. -->
+    <section>
+      <h2>Send a message</h2>
+      <form id="send-form">
+        <label for="message">Message</label>
+        <textarea id="message" maxlength="2000" rows="3" required></textarea>
+        <button type="submit">Send to subscribers</button>
+      </form>
+    </section>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <!-- Register the Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("sw.js")
+                    .then(() => console.log("Service Worker registered."))
+                    .catch((err) => console.log("Service Worker registration failed:", err));
+            });
+        }
+    </script>
+  </body>
+</html>
