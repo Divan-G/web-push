@@ -1,8 +1,8 @@
 /* Keep the demo readable on narrow screens without adding a CSS framework. */
 body {
-  max-width: 38rem;
+  max-width: 40rem;
   margin: 3rem auto;
-  padding: 0 1rem;
+  padding:0 1rem;
   font: 1rem/1.5 system-ui, sans-serif;
 }
 
@@ -32,11 +32,40 @@ button {
   cursor: pointer;
 }
 #alert-box {
-  position: fixed; /* Pins it to the viewport (use 'absolute' if relative to a parent container) */
-  top: 10px;
-  left: 10px;
-  z-index: 1000; /* Ensures it stays on top of other elements */
+  margin: 0;
 }
 #status {
   min-height: 1.5em;
 }
+#top-header{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+#middle-header{
+  max-width: 38rem;
+  margin:0 auto;
+  flex: 1 1 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
